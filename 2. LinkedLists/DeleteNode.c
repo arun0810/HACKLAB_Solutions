@@ -1,14 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//DELETE NODE
-
+//Creating a single node
 struct node
 {
     int data;
     struct node *link;
 };
 
+//Function to delete a particular node
+
+void DeleteNode(struct node **head, int ref)
+{
+    
+}
 
 
 int main()
