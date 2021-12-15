@@ -3,6 +3,7 @@
 #include<stdlib.h>
 
 //CREATING LINKEDLISTS AND ADDING NODES
+
 struct node
 {
     int data;
