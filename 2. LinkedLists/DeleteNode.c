@@ -9,6 +9,8 @@ struct node
     struct node *link;
 };
 
+
+
 int main()
 {
     struct node *head = NULL;
@@ -20,8 +22,6 @@ int main()
     current->data = 40;
     current->link = NULL;
     head->link = current;
-
-    
 
     return 0;
 }
