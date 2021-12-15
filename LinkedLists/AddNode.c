@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//CREATING LINKEDLISTS AND ADDING NODES
+//CREATING LINKEDLISTS AND ADDING A NODE
 
 struct node
 {
@@ -16,6 +16,12 @@ int main()
     head = malloc(sizeof (struct node));
     head->data = 5;
     head->link = NULL;
-    printf("%d",head->data);
+
+    struct node *current = malloc(sizeof(struct node));
+    current->data = 40;
+    current->link = NULL;
+    head->link = current;
+
+    printf("%d %d",head->data,head->link->data);
     return 0;
 }
