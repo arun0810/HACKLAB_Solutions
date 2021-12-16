@@ -1,20 +1,46 @@
+
 #include<stdio.h>
 #include<stdlib.h>
 
-//Creating a single node of a LIST
+// Creating a node of a LIST
 struct node
 {
     int data;
     struct node *link;
 };
 
-//Function to delete a particular node
-
-void DeleteNode(struct node **head, int ref)
+// Function to delete a particular node
+void DeleteNode(struct node **temp, int ref)
 {
-    struct node *current = malloc(sizeof(struct node));
+    struct node *current=*temp;
+    struct node *previous=*temp;
+
+    if(*temp==NULL)
+        printf("List is empty");
+    
+// If the delete position is at 1st node
+    else if(ref==1)
+    {
+        *temp=current->link;
+        free(current);
+        current = NULL;
+    }
+// If the delete postion is not at beginning
+    else
+    {
+        while(ref!=1)
+        {
+            previous = current;
+            current = current->link;
+            ref--;
+        }
+        previous->link = current->link;
+        free(current);
+        current = NULL;
+    }
 }
 
+// Adding a node
 void Add(int data)
 {
     struct node *head = NULL;
