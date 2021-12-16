@@ -15,18 +15,16 @@ void DeleteNode(struct node **head, int ref)
     
 }
 
-
-int main()
+void addnode(int data)
 {
     struct node *head = NULL;
     head = malloc(sizeof (struct node));
-    head->data = 5;
+    head->data = data;
     head->link = NULL;
+}
 
-    struct node *current = malloc(sizeof(struct node));
-    current->data = 40;
-    current->link = NULL;
-    head->link = current;
-
+int main()
+{
+    addnode(1);
     return 0;
 }
