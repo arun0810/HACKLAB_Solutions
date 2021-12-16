@@ -36,7 +36,6 @@ void Add(int n)
         previous->link = current;
         previous = previous->link;
     }
-
 }
 
 int main()
