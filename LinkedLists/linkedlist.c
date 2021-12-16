@@ -10,7 +10,7 @@ void addlist(int n)
 {
     struct node *newNode, *temp;
     int data, i;
-    head = (struct node *)malloc(sizeof(struct node));
+    head = malloc(sizeof(struct node));
     if(head == NULL)
     {
         printf("Unable to allocate memory.");
@@ -24,7 +24,7 @@ void addlist(int n)
         temp = head;
         for(i=2; i<=n; i++)
         {
-            newNode = (struct node *)malloc(sizeof(struct node));
+            newNode = malloc(sizeof(struct node));
             if(newNode == NULL)
             {
                 printf("Unable to allocate memory.");
@@ -111,5 +111,7 @@ int main()
     referenceNum(num);
     displayList();
     printf("NULL");
+    printf("Press any key to delete the list:");
+    deleteList();
     return 0;
 }
