@@ -1,4 +1,4 @@
-
+/***********************************************/
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -10,21 +10,40 @@ struct node
 };
 
 // Adding a node
-void Add(int data)
+void Add(int n)
 {
-    struct node *head = NULL;
+    int i,num;
+    struct node *head;
+    struct node *current;
+    struct node *previous;
     head = malloc(sizeof (struct node));
-    head->data = data;
-    head->link = NULL;
-    printf("%d->",head->data);
+    
+    printf("Enter element of node 1: ");
+    scanf("%d",&num);
+
+    head->data = num;
+    head->link = NULL;    
+    previous = head;
+
+    for(i=2;i<=n;i++)
+    {
+        current = malloc(sizeof(struct node));
+        printf("Enter element of node %d: ",i);
+        scanf("%d",&num);
+        current->data = num;
+        current->link = NULL;
+
+        previous->link = current;
+        previous = previous->link;
+    }
+
 }
 
 int main()
 {
-    Add(1);
-    Add(5);
-    Add(5);
-    Add(6);
+    int nodes;
+    printf ("Enter the no. of nodes in a list: ");
+    scanf ("%d",&nodes);
     printf("NULL");
     return 0;
 }
