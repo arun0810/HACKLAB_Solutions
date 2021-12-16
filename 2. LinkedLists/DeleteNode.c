@@ -26,5 +26,8 @@ void addnode(int data)
 int main()
 {
     addnode(1);
+    addnode(2);
+    addnode(3);
+    addnode(6);
     return 0;
 }
