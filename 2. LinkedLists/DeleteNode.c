@@ -12,22 +12,24 @@ struct node
 
 void DeleteNode(struct node **head, int ref)
 {
-    
+    struct node *current = malloc(sizeof(struct node));
 }
 
-void addnode(int data)
+void Add(int data)
 {
     struct node *head = NULL;
     head = malloc(sizeof (struct node));
     head->data = data;
     head->link = NULL;
+    printf("%d->",head->data);
 }
 
 int main()
 {
-    addnode(1);
-    addnode(2);
-    addnode(3);
-    addnode(6);
+    Add(1);
+    Add(5);
+    Add(5);
+    Add(6);
+    printf("NULL");
     return 0;
 }
