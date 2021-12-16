@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//Creating a single node
+//Creating a single node of a LIST
 struct node
 {
     int data;
