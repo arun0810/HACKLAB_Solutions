@@ -25,11 +25,12 @@ void add(int n)
     for(i=2;i<=n;i++)
     {
         current = malloc(sizeof(struct node));
-        previous->link = current;
         printf("Node %d:",i);
         scanf("%d",&num);
         current->data = num;
         current->link = NULL;
+        previous->link = current;
+        previous = current;
     }
 }
 
